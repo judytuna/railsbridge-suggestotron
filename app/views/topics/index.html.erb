@@ -11,11 +11,12 @@
 
 <% @topics.each do |topic| %>
   <tr>
+    <td><%= link_to topic.title, topic %></td>
     <td><%= topic.title %></td>
     <td><%= topic.description %></td>
     <td><%= link_to 'Show', topic %></td>
     <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-    <td><%= link_to 'Destroy', topic, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Delete', topic, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
