@@ -31,7 +31,7 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
-gem 'rake', '0.8.7'
+gem 'rake' #, '0.8.7'
 group :test, :development do
 gem 'rspec-rails', '>= 2.3.0'
 gem 'capybara', '0.3.9'
