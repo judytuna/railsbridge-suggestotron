@@ -1,12 +1,9 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
-
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
 gem 'sqlite3'
-
+gem 'jquery-rails'
+gem 'rake'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -16,31 +13,23 @@ group :assets do
   gem 'uglifier'
 end
 
-gem 'jquery-rails'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
-gem 'rake' #, '0.8.7'
+
 group :test, :development do
-gem 'rspec-rails', '>= 2.3.0'
-gem 'capybara', '0.3.9'
-gem 'database_cleaner'
-gem 'cucumber-rails'
-gem 'launchy'
+  gem 'rspec-rails', '>= 2.3.0'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'cucumber-rails'
+  gem 'launchy'
+  #json is only for judy's computer
+  gem 'json' 
 end
 
 group :production do
+  # fix for putting rails 3.1 on heroku
   gem 'therubyracer-heroku', '0.8.1.pre3'
   gem 'pg'
 end
